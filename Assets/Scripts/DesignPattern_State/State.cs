@@ -5,14 +5,12 @@ using UnityEngine;
 namespace MiracleWorker
 {
     public abstract class State
-    {
-        protected Sample_GameActor Sample_GameActor;
-        protected StateMachine StateMachine;
+    {        
+        protected StateMachine SM;
 
         protected State(Sample_GameActor sample_GameActor, StateMachine stateMachine)
-        {
-            this.Sample_GameActor = sample_GameActor;
-            this.StateMachine = stateMachine;
+        {            
+            this.SM = stateMachine;
         }
 
         public abstract void Enter();

@@ -6,13 +6,11 @@ namespace MiracleWorker
 {
     public class Sample_GameActorState : State
     {
-        public Sample_GameActor _Sample_GameActor { get; private set; }
-        public StateMachine SM;
+        public Sample_Player _Sample_Player { get; private set; }        
 
         public Sample_GameActorState(Sample_GameActor sample_GameActor, StateMachine stateMachine) : base(sample_GameActor, stateMachine)
         {
-            _Sample_GameActor = sample_GameActor;
-            SM = stateMachine;
+            _Sample_Player = (Sample_Player)sample_GameActor;            
         }
 
         public override void Enter()
